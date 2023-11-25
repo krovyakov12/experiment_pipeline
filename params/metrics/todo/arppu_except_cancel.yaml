@@ -6,13 +6,13 @@ numerator:
   aggregation_field: revenue
   aggregation_function: sum
 numerator_conditions:
-  - condition_field: pg_status
-    comparison_sign: not_equal
-    comparison_value: CANCELED
+  condition_field: pg_status
+  comparison_sign: not_equal
+  comparison_value: CANCELLED
 denominator:
   aggregation_field: user_pseudo_id
   aggregation_function: count_distinct
 denominator_conditions:
-  - condition_field: event_name
-    comparison_sign: equal
-    comparison_value: purchase
+  condition_field: event_name
+  comparison_sign: equal
+  comparison_value: purchase
